@@ -7,6 +7,13 @@ terraform {
   }
 }
 
+variable "profile" {
+  description = "AWS profile configurado na CLI"
+  type        = string
+  default     = "default"
+}
+
 provider "aws" {
   # Configuration options
+   profile = var.profile
 }
