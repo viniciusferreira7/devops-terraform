@@ -17,3 +17,15 @@ module "cloudfront" {
     module.s3
   ]
 }
+
+module "sqs" {
+  source  = "terraform-aws-modules/sqs/aws"
+
+  name = "example"
+
+  create_dlq = true
+
+  tags = {
+    Iac = true
+  }
+}
