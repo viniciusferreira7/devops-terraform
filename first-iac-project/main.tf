@@ -18,14 +18,12 @@ module "cloudfront" {
   ]
 }
 
-module "sqs" {
-  source  = "terraform-aws-modules/sqs/aws"
+# module "sqs" {
+#   source     = "terraform-aws-modules/sqs/aws"
+#   name       = "rocketseat-sql"
+#   create_dlq = true
 
-  name = "example"
-
-  create_dlq = true
-
-  tags = {
-    Iac = true
-  }
-}
+#   tags = {
+#     Iac = true
+#   }
+# }
