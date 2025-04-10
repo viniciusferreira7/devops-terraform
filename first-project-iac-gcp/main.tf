@@ -1,4 +1,4 @@
-resource "google_service_account" "vm" {
+resource "google_compute_instance" "vm" {
   name         = "rocketseat-vm"
   machine_type = "e2-micro"
   zone         = "us-central1-a"

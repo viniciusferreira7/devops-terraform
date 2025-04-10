@@ -3,3 +3,9 @@ variable "state_bucket" {
   default     = "rocketseat-state-bucket-tf"
   description = "State of bucket"
 }
+
+variable "profile" {
+  description = "AWS profile configurado na CLI"
+  type        = string
+  default     = "default"
+}
